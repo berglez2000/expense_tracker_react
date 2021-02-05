@@ -1,13 +1,206 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+hr {
+  margin: 15px 0;
 }
+
+body {
+  font-family: "Lato", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #e7e7e7;
+}
+
+.container {
+  margin: 20px 0;
+  background-color: whitesmoke;
+  min-height: 90vh;
+  width: 450px;
+  padding: 20px 35px;
+}
+
+header {
+  height: 10vh;
+}
+
+header h1 {
+  font-weight: 500;
+  font-size: 2.25rem;
+}
+
+.balance-section .balance {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.expense-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px #cacaca solid;
+  padding: 20px 0;
+  margin: 30px 0;
+  border-radius: 3px;
+  -webkit-box-shadow: 2px 2px 5px 1px #e2e2e2;
+          box-shadow: 2px 2px 5px 1px #e2e2e2;
+}
+
+.expense-section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.expense-section div h4 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.expense-section div strong {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 22px;
+}
+
+.transaction-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.transaction-section .transaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px #cacaca solid;
+  border-radius: 3px;
+  -webkit-box-shadow: 2px 2px 5px 1px #e2e2e2;
+          box-shadow: 2px 2px 5px 1px #e2e2e2;
+  margin: 8px 0;
+  padding: 8px 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.transaction-section .transaction .hide {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
+  z-index: -1;
+}
+
+.transaction-section .transaction .hide button {
+  padding: 10px;
+  border: none;
+  background-color: #ec4545;
+  cursor: pointer;
+  color: white;
+}
+
+.transaction-section .transaction .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.transaction-section .transaction:hover .hide {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  z-index: 1;
+  opacity: 1;
+}
+
+.add-transaction {
+  margin: 20px 0;
+}
+
+.add-transaction .submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.add-transaction .submit input,
+.add-transaction .submit .btn {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+.add-transaction .submit input {
+  border: 1px #b3b3b3 solid;
+  padding: 8px 10px;
+}
+
+.add-transaction .submit .btn {
+  border: none;
+  background-color: #2377ff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=index.css.map */
